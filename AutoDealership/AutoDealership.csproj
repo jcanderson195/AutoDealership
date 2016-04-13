@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoDealership.cs" />
+    <Compile Include="UserInterface.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Manufacturer.cs" />
     <Compile Include="Program.cs" />

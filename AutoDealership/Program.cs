@@ -11,8 +11,11 @@ namespace AutoDealership
         static void Main(string[] args)
         {
 
-            Manufacturer test = new Manufacturer();
-            test.DisplayCreatedVehicles();
+            //Manufacturer test = new Manufacturer();
+            //test.DisplayCreatedVehicles();
+
+            UserInterface newMenu = new UserInterface();
+            newMenu.Introduction();
             Console.ReadKey();
 
         }
