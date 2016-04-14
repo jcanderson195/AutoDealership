@@ -16,6 +16,9 @@ namespace AutoDealership
 
             UserInterface newMenu = new UserInterface();
             newMenu.Introduction();
+
+            //AutoDealership test = new AutoDealership();
+            //test.OrderVehicles();
             Console.ReadKey();
 
         }

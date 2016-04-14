@@ -46,7 +46,6 @@
     <Compile Include="AutoDealership.cs" />
     <Compile Include="UserInterface.cs" />
     <Compile Include="Customer.cs" />
-    <Compile Include="Manufacturer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vehicle.cs" />

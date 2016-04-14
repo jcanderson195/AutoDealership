@@ -8,6 +8,11 @@ namespace AutoDealership
 {
     class UserInterface
     {
+        AutoDealership salesmen;
+        public UserInterface()
+        {
+            salesmen = new AutoDealership();
+        }
 
         public void Introduction()
         {
@@ -32,7 +37,8 @@ namespace AutoDealership
 
             if (choice == 1)
             {
-                //insert function(s) for salesman 
+                Console.WriteLine("------------------------------");
+                SalesmenOptions();
             }
             else if (choice == 2)
             {
@@ -52,6 +58,38 @@ namespace AutoDealership
                 Console.WriteLine("------------------------------");
                 Introduction();
                 
+            }
+        }
+
+        public void SalesmenOptions()
+        {
+            Console.WriteLine("What would you like to do today?");
+            Console.WriteLine("1.Order vehicles");
+            Console.WriteLine("2.Test Drive Vehicle");
+            Console.WriteLine("3. Raise Price of Vehicle");
+            Console.WriteLine("4.Lower Price of Vehicle");
+            Console.WriteLine("------------------------------");
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                salesmen.OrderVehiclesFromManufacture();
+                salesmen.DisplayVehiclesOnLot();
+                Console.WriteLine("------------------------------");
+                Introduction();
+            }
+            else if (choice == 2)
+            {
+                //insert function to test vehicle
+            }
+            else if (choice == 3)
+            {
+                //insert function to raise price of vehicle
+            }
+            else if (choice == 4)
+            {
+                //insert function to lower price of vehicle
             }
         }
 
