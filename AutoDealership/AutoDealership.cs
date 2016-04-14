@@ -8,7 +8,7 @@ namespace AutoDealership
 {
     class AutoDealership : Vehicle
     {
-        List<Vehicle> VehiclesCreated = new List<Vehicle>();
+       public List<Vehicle> VehiclesCreated = new List<Vehicle>();
 
         public Vehicle civic;
         public Vehicle cruze;

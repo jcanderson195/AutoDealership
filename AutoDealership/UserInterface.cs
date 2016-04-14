@@ -22,7 +22,7 @@ namespace AutoDealership
             Console.WriteLine("------------------------------");
             PathOptions();
             PathChoice();
-        }
+        }               //good
 
         public void PathOptions()
         {
@@ -31,7 +31,7 @@ namespace AutoDealership
             Console.WriteLine("2.Customer");
             Console.WriteLine("3.Exit");
             Console.WriteLine("------------------------------");
-        }
+        }               //good
 
         public void PathChoice()
         {
@@ -63,7 +63,7 @@ namespace AutoDealership
                 Introduction();
                 
             }
-        }
+        }                   //good
 
         public void SalesmenOptions()
         {
@@ -136,11 +136,15 @@ namespace AutoDealership
             }
             else if (choice == 2)
             {
-                //insert haggle price function
+                newCustomer.HagglePriceOption(salesmen);
+                Console.WriteLine("------------------------------");
+                CustomerOptions();
             }
             else if (choice == 3)
             {
-                //insert purchase vehicle function
+                newCustomer.PurchaseVehicle(salesmen);
+                Console.WriteLine("------------------------------");
+                CustomerOptions();
             }
             else if (choice == 4)
             {
@@ -149,6 +153,6 @@ namespace AutoDealership
                 CustomerOptions();
 
             }
-        }
+        }       //good
     }
 }
