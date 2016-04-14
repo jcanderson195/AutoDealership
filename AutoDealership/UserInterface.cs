@@ -9,9 +9,11 @@ namespace AutoDealership
     class UserInterface
     {
         AutoDealership salesmen;
+        Customer newCustomer;
         public UserInterface()
         {
             salesmen = new AutoDealership();
+            newCustomer = new Customer();
         }
 
         public void Introduction()
@@ -42,7 +44,9 @@ namespace AutoDealership
             }
             else if (choice == 2)
             {
-                //insert customer functions
+                Console.WriteLine("------------------------------");
+                newCustomer.GatherCustomerInformation();
+                CustomerOptions();
             }
             else if (choice == 3)
             {
@@ -64,34 +68,87 @@ namespace AutoDealership
         public void SalesmenOptions()
         {
             Console.WriteLine("What would you like to do today?");
-            Console.WriteLine("1.Order vehicles");
-            Console.WriteLine("2.Test Drive Vehicle");
+            Console.WriteLine("1.Order Vehicles");
+            Console.WriteLine("2.Run Tests On Vehicle");
             Console.WriteLine("3. Raise Price of Vehicle");
             Console.WriteLine("4.Lower Price of Vehicle");
+            Console.WriteLine("5.Start End of the Year Sports Event");
+            Console.WriteLine("6.Sell Vehicle");
             Console.WriteLine("------------------------------");
 
             int choice = Convert.ToInt32(Console.ReadLine());
 
             if (choice == 1)
             {
-                salesmen.OrderVehiclesFromManufacture();
+                salesmen.OrderVehiclesFromManufacturer();
                 salesmen.DisplayVehiclesOnLot();
                 Console.WriteLine("------------------------------");
                 Introduction();
             }
             else if (choice == 2)
             {
-                //insert function to test vehicle
+                salesmen.TestVehicleOption();
+                Introduction();
             }
             else if (choice == 3)
             {
-                //insert function to raise price of vehicle
+                salesmen.RaisePrice();
+                Console.WriteLine("------------------------------");
+                Introduction();
             }
             else if (choice == 4)
             {
-                //insert function to lower price of vehicle
+                salesmen.LowerPrice();
+                Console.WriteLine("------------------------------");
+                Introduction();
+            }
+            else if (choice == 5)
+            {
+                salesmen.SaleEvent();
+                Console.WriteLine("------------------------------");
+                Introduction();
+            }
+            else if (choice == 6)
+            {
+                salesmen.SellVehicle();
+                Console.WriteLine("------------------------------");
+                Introduction();
+            }
+        }       //good
+
+        public void CustomerOptions()
+        {
+            Console.WriteLine("What would you like to do today?");
+            Console.WriteLine("1.Test drive a vehicle");
+            Console.WriteLine("2.Haggle Price of a vehicle");
+            Console.WriteLine("3.Purchase Vehicle");
+            Console.WriteLine("4.View cars on lot");
+            Console.WriteLine("------------------------------");
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                newCustomer.TestDriveVehicle(salesmen);
+                Console.WriteLine("------------------------------");
+                CustomerOptions();
+
+            }
+            else if (choice == 2)
+            {
+                //insert haggle price function
+            }
+            else if (choice == 3)
+            {
+                //insert purchase vehicle function
+            }
+            else if (choice == 4)
+            {
+                salesmen.DisplayVehiclesOnLot();
+                Console.WriteLine("------------------------------");
+                CustomerOptions();
+
             }
         }
-
     }
 }

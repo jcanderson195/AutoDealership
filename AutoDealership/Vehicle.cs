@@ -12,14 +12,16 @@ namespace AutoDealership
         public string brand;
         public string carName;
         public double carPrice;
+        public bool testedStatus;
         public bool testDrive;
 
-        public Vehicle(string Type, string Brand, string CarName, bool TestDrive, double CarPrice)
+        public Vehicle(string Type, string Brand, string CarName, bool TestedStatus, bool TestDrive, double CarPrice)
         {
             type = Type;
             brand = Brand;
             carName = CarName;
             carPrice = CarPrice;
+            testedStatus = TestedStatus;
             testDrive = TestDrive;
         }
 
